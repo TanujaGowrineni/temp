@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- JDBC -->
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">password</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://javafs220404.ckelth81wx17.eu-west-2.rds.amazonaws.com:5432/demos</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<!-- Hibernate Properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.default_schema">hibernate</property>
+		<!-- Optional -->
+		<property name="hibernate.show_sql">true</property><!-- This will print the SQL that Hibernate runs to the console -->
+		<property name="hibernate.format_sql">true</property>
+		<!-- DDL Permission Level -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!-- Mapping Entities -->
+		<mapping class="com.revature.models.Avenger" />
+		<mapping class="com.revature.models.Home" />
+		
+		
+	</session-factory>
+
+</hibernate-configuration>
